@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>DGB대구은행</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="no">
+
+    <script src="./js/marked.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/commonui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dgb_project_basic.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dgb_project_cms.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dgb_project_fpmall.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dgb_project_mydata.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dgb_project_robo.css" />
+    <link rel="stylesheet" type="text/css" href="./css/maf.css" />
+    <link rel="stylesheet" type="text/css" href="./css/maf_contents.css" />
+    <link rel="stylesheet" type="text/css" href="./css/maf_contents_02.css" />
+
+    <style>
+        html,body {
+            height:100%;
+            margin: 0;
+        }
+        .elewrap{
+            margin-top: 5px;
+            padding:10px;
+            border: 1px solid #ccc;
+        }
+        #editor1 textarea, #editor2 {
+            border: none;
+            border-right: 1px solid #ccc;
+            resize: none;
+            outline: none;
+            background-color: #f6f6f6;
+            font-size: 14px;
+            font-family: 'Monaco', courier, monospace;
+            padding: 20px;
+
+            display: inline-block;
+            width:100%;
+            height: 100%;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        #result{
+            display: inline-block;
+            height: 100%;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .elewrap .cmm-tab-box{
+            margin : 0 0 0 0
+        }
+        code {
+            color: #f66;
+        }
+    </style>
+</head>
+<body>
+    <!-- html 에디터 영역 시작 -->
+    <div id="editor1" style="width:25%;height:100%;float:left;display: none">
+        <textarea id="input" style="height:100%;"></textarea>
+    </div>
+
+    <div id="editor2" style="width:50%;height:100%;float:left;">
+        <div class="elewrap">
+            <button type="button" style="width:30%;margin-bottom: 5px" onclick="uf_setElement(this);return false;" data-role="none" class="cmm-btn-gray-line">적용</button>
+            <div class="cmm-tab-box remove-element" contenteditable="true" onclick="uf_removeElement(this);return false;">
+                <button type="button" data-role="none" class="active" id="efnTab" data-jxln="LNG010">금융인증서</button>
+                <button type="button" data-role="none" id="authTab" data-jxln="LNG001" class="">브라우저인증서</button>
+                <button type="button" data-role="none" id="idTab" data-jxln="LNG002" class="">아이디</button>
+            </div>
+        </div>
+        <div class="elewrap">
+            <button type="button" style="width:30%;margin-bottom: 5px" onclick="uf_setElement(this);return false;" data-role="none" class="cmm-btn-gray-line">적용</button>
+            <div class="cmm-form remove-element" contenteditable="true" onclick="uf_removeElement(this);return false;">
+                <div class="cmm-btn-box">
+                    <button type="button" data-role="none" class="cmm-btn-gray" id="_btnCancel" data-jxln="LNG013">취소</button>
+                    <button type="button" data-role="none" class="cmm-btn-blue" id="_btnConfirm" data-jxln="LNG014">확인</button>
+                </div>
+            </div>
+        </div>
+        <div class="elewrap">
+            <button type="button" style="width:30%;margin-bottom: 5px" onclick="uf_setElement(this);return false;" data-role="none" class="cmm-btn-gray-line">적용</button>
+            <div class="cmm-form remove-element" contenteditable="true" onclick="uf_removeElement(this);return false;">
+                <p class="form-box">
+                    <label for="sel_accno_DPO" class="required" data-jxln="LNG007">계좌번호<em class="req">필수 항목입니다.</em></label>
+                    <span class="ui-select">
+                        <a href="#" role="button" id="sel_accno_DPO-button" aria-haspopup="true" title="계좌번호를 변경할 수 있습니다." class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow"><span data-acno="511186137812" data-bnkcd="031"><img src="https://mbanking.dgb.co.kr/img/sbs/icon/bank/031.png" style="width:20px;margin-top:7px;padding-right:5px;" alt="대구은행">511-18-613781-2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;정기예금(직장인우대예금)&nbsp;]</span></a>
+                        <span style="display: none;" id="sel_accno_DPO-listbox2-placeholder"></span>
+                        <input type="hidden" id="sel_accno_DPO" autocomplete="off" value="511186137812">
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="elewrap">
+            <button type="button" style="width:30%;margin-bottom: 5px" onclick="uf_setElement(this);return false;" data-role="none" class="cmm-btn-gray-line">적용</button>
+            <div class="cmm-form remove-element" contenteditable="true" onclick="uf_removeElement(this);return false;">
+                <label for="tlno" class="required" data-jxln="LNG003">전화번호<em class="req">필수 항목입니다.</em></label>
+                <input type="tel" data-role="none" id="tlno" name="tlno" data-jxlnh="TIT002" title="통장 분실신고 연락처 입력" data-jxlnp="PHR002" placeholder="-없이 숫자만 입력" data-required-msg="전화번호를 입력하세요." data-input-filter="NUM|LEN[12,13]" required="" minlength="12" maxlength="13" autocomplete="off">
+            </div>
+        </div>
+        <div class="elewrap">
+            <button type="button" style="width:30%;margin-bottom: 5px" onclick="uf_setElement(this);return false;" data-role="none" class="cmm-btn-gray-line">적용</button>
+            <div class="cmm-form remove-element" contenteditable="true" onclick="uf_removeElement(this);return false;">
+                <div class="cmm-label" data-jxln="LNG002">언어설정</div>
+                <span class="cmm-radio">
+                    <div class="ui-radio"><label for="_langKo" data-jxln="LNG003" class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-on" role="radio" aria-checked="true">한국어</label><input type="radio" class="_lang" name="_lang" id="_langKo" value="DF" checked="checked" aria-hidden="true" autocomplete="off"></div>
+                </span>
+                <span class="cmm-radio">
+                    <div class="ui-radio"><label for="_langEn" data-jxln="LNG004" class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off" role="radio" aria-checked="false">English</label><input type="radio" class="_lang" name="_lang" id="_langEn" value="EN" aria-hidden="true" autocomplete="off"></div>
+                </span>
+            </div>
+        </div>
+        <div class="elewrap">
+            <button type="button" style="width:30%;margin-bottom: 5px" onclick="uf_setElement(this);return false;" data-role="none" class="cmm-btn-gray-line">적용</button>
+            <div class="cmm-list-toggle remove-element" contenteditable="true" onclick="uf_removeElement(this);return false;">
+                <div class="list">
+                    <div data-ui-toggle="box">
+                        <button type="button" data-role="none" class="active" aria-expanded="true">유의사항</button>
+                        <div data-ui-toggle="view" class="bg">
+                            <ul class="cmm-text-dot">
+                                <li>대구은행에서 업무처리 중 발생한 <strong><span class="point-red">『칭찬/불만/제안』</span></strong> 사항을 접수하시는 곳입니다.<br>대구은행의 부당한 <strong><span class="point-red">업무처리 및 금융분쟁은 『금융민원접수』</span></strong>를 이용하여 주시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- html 에디터 영역 종료 -->
+
+    <!-- html 출력 영역 시작 -->
+    <div id="result" style="width:50%; height:100%; float:left; display:flex; flex-direction:column;">
+        <header id="header" class="_DGB_IMB_HEADER" aria-hidden="true" style="top: 0px;position:inherit">
+            <div class="top" style="">
+                <button type="button" data-role="none" class="cmm-btn-header-back" id="_DGB_COM_HEADER_BACK" style="visibility: visible; display: block;">이전 화면으로 이동</button>
+                <h1 id="_DGB_IMB_HEADER_TITLE_TOP_AREA" class="tit" aria-hidden="true"><span id="_DGB_IMB_HEADER_TITLE_TOP" class="none"></span></h1>
+
+                <!--<button type="button" data-role="none" class="cmm-btn-header-chatbot animate" id="_DGB_IMB_HEADER_CHATBOT"><span>챗</span><span>봇</span></button>-->
+                <button type="button" data-role="none" class="cmm-btn-header-search" id="_DGB_IMB_HEADER_SEARCH" style="display: inline-block;">단어검색</button>
+                <button type="button" data-role="none" class="cmm-btn-header-menu" id="_DGB_IMB_HEADER_MENU" style="display: inline-block;">메인메뉴</button>
+            </div>
+
+            <!-- 타이틀 -->
+            <div class="bottom" id="_DGB_IMB_HEADER_TITLE_AREA" style="display: block;">
+                <h1 class="tit"><span id="_DGB_IMB_HEADER_TITLE" contenteditable="true">통합이체</span></h1>
+            </div>
+        </header>
+
+        <section id="content" class="btn" style="top: 0px; flex: 1; overflow: auto;"></section>
+    </div>
+    <!-- html 출력 영역 종료 -->
+
+    <script>
+        document.getElementById('input').onkeyup = function(e) {
+            //document.getElementById('content').innerHTML = marked(document.getElementById('input').value);
+        };
+        function uf_setElement(thisObj)
+        {
+            var appendObj = thisObj.closest(".elewrap").querySelector(".remove-element").outerHTML.replaceAll("contenteditable=\"true\"", "");
+            //document.getElementById('input').value += (thisObj.innerHTML.substring(thisObj.innerHTML.indexOf("<")));
+            document.getElementById('content').innerHTML += marked(appendObj.substring(appendObj.indexOf("<")));
+        }
+        function uf_removeElement(thisObj)
+        {
+            //document.getElementById('input').value += (thisObj.innerHTML.substring(thisObj.innerHTML.indexOf("<")));
+            //document.getElementById('content').innerHTML = marked(document.getElementById('input').value);
+            if(!thisObj.closest(".elewrap"))
+            {
+                thisObj.remove();
+            }
+        }
+    </script>
+</body>
+</html>

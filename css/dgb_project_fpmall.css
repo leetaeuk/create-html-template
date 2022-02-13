@@ -1,0 +1,972 @@
+@charset "utf-8";
+
+/* FP Mall */
+#content.content-financial-font {padding-left:0.4rem; padding-right:0.4rem}
+.content-financial-font * {font-family:'Pretendard'}
+.screen-only {position:absolute; font-size:0}
+.fcms-btn-box-fixed {display:flex; position:fixed; left:0; bottom:0;padding:0 0.34rem;width:100%; z-index:3;box-sizing:border-box}
+*[class^="fcms-btn"].col1 {width:50%}
+.fcms-btn-box-fixed > a,
+.fcms-btn-box-fixed > button {line-height:0.88rem; height:0.88rem; border-radius:0; font-weight:700;white-space:nowrap}
+.fcms-btn-box-fixed.type-round  > a,
+.fcms-btn-box-fixed.type-round  > button {margin:0 0.12rem 0.5rem 0.12rem; border-radius:0.2rem}
+.fcms-btn-secondary {display:inline-block; padding:0 0.1rem; width:100%; font-size:0.3rem; color:#222; text-align:center; border:0.02rem solid #222; border-radius:0.15rem; background:#fff; box-sizing:border-box}
+.fcms-btn-primary {display:inline-block; padding:0 0.1rem; width:100%; font-size:0.3rem; color:#fff; text-align:center; border:0.02rem solid #222; border-radius:0.15rem; background:#222; box-sizing:border-box}
+.fcms-btn-box-fixed.fprodview-yscroll-js { visibility:hidden; -webkit-transform:translate(0, 100%);  transform:translate(0, 100%);  -webkit-transition:visibility 0s ease 0.3s, -webkit-transform 0.3s ease 0s;  transition:visibility 0s ease 0.3s, -webkit-transform 0.3s ease 0s; transition:transform 0.3s ease 0s, visibility 0s ease 0.3s; transition:transform 0.3s ease 0s, visibility 0s ease 0.3s, -webkit-transform 0.3s ease 0s}
+.fcms-btn-box-fixed.fprodview-yscroll-js.is-fixed { visibility:visible; -webkit-transform:translate(0, 0);  transform:translate(0, 0); -webkit-transition:-webkit-transform 0.3s ease 0s;  transition:-webkit-transform 0.3s ease 0s; transition:transform 0.3s ease 0s; transition:transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s}
+
+/*목록형*/
+.fprodlist-type1 .item {position:relative; border-top:0.02rem solid #f5f5f5}
+.fprodlist-type1 .item .listitem {display:table; width:100%; text-align:left}
+.fprodlist-type1 .item .listitem:after {content:''; display:block; position:absolute; right:0.2rem; top:50%; z-index:1; width:0.16rem; height:0.28rem; margin-top:-0.14rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_ra_type3.png) center center no-repeat; background-size:100% auto}
+.fprodlist-type1 .listitem .listname {display:table-cell; position:relative; z-index:2; width:69%; max-width:69%; padding:0.34rem 0}
+.fprodlist-type1 .listitem .listname .inbox {display:inline-block; vertical-align:middle}
+.fprodlist-type1 .listitem .listname .inbox p {display:-webkit-box; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical}
+.fprodlist-type1 .listitem .listname .inbox p:first-child {font-size:0.30rem; font-weight:700; line-height:0.44rem; letter-spacing:-0.05em}
+.fprodlist-type1 .listitem .listname .inbox p:nth-child(2) {margin-top:0.02rem; color:#454545; font-size:0.26rem; line-height:0.44rem}
+.fprodlist-type1 .listitem .listinfo {display:table-cell; position:relative; z-index:2; width:31%; min-width:2.3rem; padding:0.34rem 0; text-align:right;  background:#fff}
+.fprodlist-type1 .listitem .listinfo .inbox {display:inline-block; vertical-align:middle}
+.fprodlist-type1 .listitem .listinfo .inbox p {font-size:0.3rem; font-weight:900; line-height:0.40rem}
+.fprodlist-type1 .listitem .listinfo .inbox p:first-child {color:#9c27b0}
+.fprodlist-type1 .listitem .listinfo .inbox p em {display:inline-block; font-family:'pass', sans-serif; font-size:0.32rem}
+.fprodlist-type1 .listitem .listinfo .inbox .icns-radius-type1 {display:inline-block; vertical-align:text-bottom; line-height:0.36rem; margin:0 0.06rem; padding:0 0.1rem; border-radius:0.2rem; background-color:#ebebeb; text-align:center; font-size:0.2rem; font-weight:900; color:#9c27b0; white-space:nowrap}
+.fprodlist-type1 .listitem .listinfo .inbox .gtxt {color:#666; font-size:0.26rem; font-weight:normal}
+.fprodlist-type1 .listitem .listinfo .inbox .gtxt + .gtxt{margin-top:-0.08rem}
+
+/*상세 목록형 배너*/
+.fcms-tab-content .fprodlist-type1 .item {border:0.02rem solid #f5f5f5}
+.fcms-tab-content .fprodlist-type1 .listitem .listinfo {padding-right:0.2rem}
+
+/*카드형*/
+.financial-fprodlist-type2 .item .listitem {display:table; width:100%}
+.financial-fprodlist-type2 .listitem .listimage {display:table-cell; width:2.9rem; min-width:2.9rem; padding:0.34rem 0.4rem 0.34rem 0}
+.financial-fprodlist-type2 .listitem .listimage .inbox {display:inline-block; vertical-align:middle}
+.financial-fprodlist-type2 .listitem .listimage .inbox p {font-size:0.32rem}
+.financial-fprodlist-type2 .listitem .listimage .inbox .img {width:2.5rem; height:1.59rem}
+.financial-fprodlist-type2 .listitem .listimage .inbox img {width:100%}
+.financial-fprodlist-type2 .listitem .listname {display:table-cell; width:calc(100% - 2.9rem); padding:0.34rem 0}
+.financial-fprodlist-type2 .listitem .listname .inbox {display:inline-block; vertical-align:middle}
+.financial-fprodlist-type2 .listitem .listname .inbox p {display:-webkit-box; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical; line-height:}
+.financial-fprodlist-type2 .listitem .listname .inbox p:first-child {color:#222; font-size:0.32rem}
+.financial-fprodlist-type2 .listitem .listname .inbox p:nth-child(2) {margin-top:0.2rem; color:#222; font-size:0.24rem}
+.icns-ra-type1 span {position:relative}
+.icns-ra-type1 span:after {content:''; display:inline-block; vertical-align:bottom; width:0.32rem; height:0.32rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_ra_type1.png) center center no-repeat; background-size:50% auto}
+.btns_ra_type1 {color:#9c27b0; font-weight:700}
+.fcms-conlist-type1 .btns_ra_type1 {display:block; margin-top:0.1rem}
+.btns_ra_type1 span {position:relative; padding-right:0.34rem}
+.btns_ra_type1 span:after {content:''; display:block; position:absolute; right:0; top:50%; width:0.16rem; height:0.24rem; margin-top:-0.12rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_ra_type2.png) 0 0 no-repeat; background-size:100% auto}
+.fprod-tab-container {position:relative}
+.fprod-tab-content .fprodlist-wrap {margin-top:0.52rem}
+.fprod-tab-content .fprodlist-wrap:last-child  .fprodlist-type1 {border-bottom:0}
+.fprodlist-wrap .fprodtit {color:#9c27b0; font-size:0.4rem; font-weight:900}
+.fprodlist-wrap .fprodtit em {font-family:'pass', sans-serif}
+.fprod-tab-content .fprodlist-type1 {margin-top:-0.1rem; border-bottom:0.04rem solid #f5f5f5}
+.fprod-tab-content .fprodlist-type1 .item:first-child {border-top:0}
+.fprod-tab-content .fcms-banner-type1 a {display:block; margin-top:0.6rem; margin-bottom:-0.08rem}
+
+/*외환 환율표시 - 상속막음*/
+.cmm-exchange-box.fcms-type .top-box.info {padding-top:0.4rem; padding-right:0; white-space:nowrap}
+.cmm-exchange-box.fcms-type .top-box.info .txt {float:left; margin:0; font-size:0.32rem; font-weight:700}
+.cmm-exchange-box.fcms-type .top-box.info .date {font-size:0.24rem; letter-spacing:-0.05em; text-align:right}
+.cmm-exchange-box.fcms-type .top-box.info .date .btn-refresh {display:inline-block; position:relative; right:auto; top:auto; width:0.3rem; height:0.6rem; font-size:0; text-indent:0; text-align:right}
+.cmm-exchange-box.fcms-type .top-box.info .btn-refresh:before {display:none}
+.cmm-exchange-box.fcms-type .top-box.info .btn-refresh:after {content:''; display:inline-block; width:0.24rem; height:0.24rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/fcms_icon_small.png) 0 0 no-repeat; background-size:100% auto}
+.cmm-exchange-box.fcms-type .list {margin:0.32rem 0px 0px}
+.cmm-exchange-box.fcms-type .list .flag .flagunit {display:block; margin-top:0.14rem; color:#222; font-size:0.24rem; font-weight:700; line-height:0.44rem}
+.cmm-exchange-box.fcms-type .list .flag+.tit {font-weight:700}
+.cmm-exchange-box.fcms-type .list .tit+.txt {font-weight:700}
+
+/*fund*/
+.fprod-gofund-wrap p {margin-top:0.1rem; color:#222; font-size:0.32rem; line-height:1.4}
+.fprod-gofund-wrap .fcms-title-type1 {margin-top:0.26rem; font-size:0.32rem; font-weight:700}
+.fprod-gofund-wrap+.fcms-btn-box {margin-top:0.3rem; margin-bottom:-0.2rem}
+.fcms-btns-gofund {padding:0.28rem 0.24rem 0.26rem 0.34rem; border:0.02rem dashed #ddd; border-radius:0.2rem; color:#666; font-size:0.32rem}
+.fcms-btns-gofund span {display:block; position:relative}
+.fcms-btns-gofund span:after {content:''; display:block; position:absolute; right:0; top:50%; width:0.6rem; height:0.6rem; margin-top:-0.3rem; border-radius:50%; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/fcms-btns-gofund.png) center center no-repeat #f5f5f5; background-size:0.18rem auto}
+
+/* fcms layout */
+.fprodview-wrap {position:relative; color:#222}
+.fprodview-wrap iframe {width:100%}
+.fprodview-head {padding-bottom:0.44rem}
+.fprodview-body {position:relative; padding-top:0.44rem}
+.fprodview-body:before {content:''; display:block; position:absolute; top:0; right:-0.5rem; left:-0.5rem; height:0.04rem; background-color:#f5f5f5}
+.fprodview-body.no-line:before {display:none}
+
+/*floating*/
+.floating {display:none; position:fixed; bottom:1.74rem; right:0.4rem; padding-bottom:0; text-align:right; z-index:11; transition:bottom 0.3s ease-in-out, padding 0.3s ease-in-out}
+.floating.is-fixed {display:block}
+.floating button {display:table; width:1.2rem; height:1.2rem; margin:0 0 0 auto; border-radius:26px; background-color:rgba(51,51,51,0.8); white-space:nowrap; overflow:hidden; color:#fff; font-size:1.4rem; transition:all 0.23s ease-in-out, box-shadow 1.5s linear; box-shadow:0px 0.2rem 0.3rem 0 rgba(0,0,0,0.25); table-layout:fixed}
+.floating .floating-inbox {display:block; position:relative; width:1.2rem; height:1.2rem; margin:0 0 0 auto; border-radius:50%; font-size:1.4rem; color:#fff; white-space:nowrap; text-align:right; box-shadow:0px 0.2rem 0.3rem 0 rgba(0,0,0,0.25)}
+.floating .floating-inbox .floatingBox {display:block; position:absolute; top:0; bottom:0; right:0; width:1.2rem; border-radius:0.56rem; background-color:#ebd0ff; overflow:hidden; transition:all 0.3s ease-in-out, box-shadow 1.5s linear; background:linear-gradient(to right, #eacfff 0%, #fff 100%)}
+.floating .floating-inbox .floating-btns {display:block; position:relative; width:1.2rem; height:1.2rem; line-height:1; border-radius:50%; background-color:#9d22b1; color:#fff; font-size:0.28rem; line-height:0.34rem; text-align:center; transition:all 0.3s ease-in-out}
+.floating .floating-inbox .floating-btns > span {display:inline-block; padding-top:0.05rem}
+.floating .floating-inbox.on .floatingBox {left:auto; right:0; width:5.8rem; height:100%}
+.floating .floating-inbox.on .floating-btns {position:absolute; right:4.6rem; top:0}
+
+/*fcms font base*/
+.fcms-tab-container {margin-top:0.22rem}
+.fcms-tab-content {position:relative; padding:0.2rem 0 0.2rem 0; padding-left:0.2rem; padding-right:0.2rem}
+.fcms-tab-content:last-child {padding-top:0}
+.fcms-tab-content.fcms {font-size:0.26rem}
+
+/*apply for ir (무방문 전세자금대출)*/
+.fcms-tab-content figure > img {width:100%}
+.fcms-tab-content figure+figure {margin-top:0.2rem}
+.fcms-tab-content figure figcaption {position:absolute; font-size:0}
+.fcms-tab-content.fcms .fcms-title-type1+figure {margin-top:0.34rem}
+
+/*세븐적금 QR코드 이미지*/
+.fimg-wrap img {width:100%}
+
+/* fcms common title */
+.fcms-title-wrap {position:relative}
+.fcms-title-wrap .fcms-btns-wrap {position:absolute; right:0; top:0; height:0.4rem}
+.fcms-title-wrap .fcms-btns-wrap .btns {display:inline-block; color:#888; font-size:0.24rem}
+.fcms-title-wrap.right-top .fcms-btns-wrap{top:-0.94rem}
+.fcms-title-wrap.right-top .fcms-btns-wrap button{padding:0.2rem 0}
+.fcms-title-type1 + .fcms-title-wrap.right-top .fcms-btns-wrap{top:-0.7rem}
+
+/*cms tabcont title  */
+.fcms-title-type0 {padding-bottom:0.08rem; font-size:0.32rem; font-weight:700; line-height:0.44rem; border-bottom:2px solid #aaa; color:#888}
+.fcms-title-type0+.fcms-title-type1,
+.fcms-title-type0+.fcms-title-type2 {margin-top:0.32rem}
+
+/*금리안내*/
+.fcms-title-type0+.fcms-title-wrap {margin-top:0.32rem}
+
+/*DGB UntacT카드-유의사항*/
+.fcms-title-type0 + .fcms-dotList-type1 {margin-top:0.32rem}
+
+/*예금+적금*/
+.fcms-title-type0 + .ul-flist-wrap {margin-top:0.2rem}
+
+/*cms title h2 or h3*/
+.fcms-title-type1 {margin-top:24px; margin-top:0.48rem; color:#222;font-size:0.32rem; font-weight:700}
+.fcms-title-type1.type-gap1 {margin-top:0.28rem}
+.fcms-tab-content h2.fcms-title-type1:first-child {margin-top:0}
+
+/*margin top base*/
+.fcms-tab-content.fcms .fcms-title-wrap+* {margin-top:0.4rem}
+
+/*margin top etc*/
+.fcms-tab-content.fcms .screen-only+.fcms-title-type1 {margin-top:0}
+.fcms-tab-content.fcms .screen-only+.fcms-title-type2 {margin-top:0}
+.fcms-tab-content.fcms:first-child .screen-only+.fcms-title-type1,
+.fcms-tab-content.fcms:first-child .screen-only+.fcms-title-type2,
+.fcms-tab-content.fcms:first-child .screen-only+.fcms-title-type3 {margin-top:0.12rem}
+.fcms-tab-content.fcms .screen-only+.fcms-title-wrap  {margin-top:0}
+.fcms-tab-content.fcms .screen-only+.fcms-title-wrap .fcms-title-type1 {margin-top:0}
+.fcms-tab-content.fcms .fcms-title-type1+.fcms-title-type2 {margin-top:0.26rem}
+.fcms-tab-content.fcms .fcms-title-type1+table {margin-top:0.34rem}
+
+/*cms title */
+.fcms-title-type2 {margin-top:0.5rem; color:#222;font-size:0.3rem;font-weight:700}
+.fcms-title-type3 {margin-top:0.5rem; color:#222;font-size:0.28rem;  line-height:0.44rem; font-weight:700}
+
+/* fcms common gap */
+.fcms-tab-content.fcms ul {line-height:1.5}
+.fcms-tab-content.fcms p {line-height:1.5}
+.fcms-tab-content.fcms > ul li {margin-top:0.16rem}
+.fcms-tab-content.fcms > ul + p {margin-top:0.16rem}
+.fcms-tab-content.fcms > ul + p.point_blue {margin-top:0.2rem}
+.fcms-tab-content.fcms > ul + table {margin-top:0.16rem}
+.fcms-tab-content.fcms > ol li {margin-top:0.16rem}
+.fcms-tab-content.fcms > ol + p {margin-top:0.16rem}
+.fcms-tab-content.fcms > ol + p.point_blue {margin-top:0.2rem}
+.fcms-tab-content.fcms > p + ul {margin-top:0.16rem}
+.fcms-tab-content.fcms > p + p {margin-top:0.16rem}
+.fcms-tab-content.fcms > table + table {margin-top:0.2rem}
+
+/*depth2*/
+.fcms-tab-content.fcms > ul li ul li {margin-top:0.16rem}
+.fcms-tab-content.fcms > ul li ul + table {margin-top:0.16rem}
+.fcms-tab-content.fcms > ul li ul + p {margin-top:0.16rem}
+.fcms-tab-content.fcms > ul li p + p {margin-top:0.16rem}
+.fcms-tab-content.fcms > ul li p + table {margin-top:17px; margin-top:0.34rem}
+.fcms-tab-content.fcms > ul li ol +p {margin-top:0.16rem}
+.fcms-tab-content.fcms .fcms-title-type1+ul {margin-top:0.26rem}
+.fcms-tab-content.fcms .fcms-title-type1+ul li {margin-top:0.16rem}
+.fcms-tab-content.fcms .fcms-title-type1+p {margin-top:0.26rem}
+
+/*title+tag*/
+.fcms-tab-content.fcms .fcms-title-type2+* {margin-top:0.2rem}
+.fcms-tab-content.fcms .fcms-title-type3+* {margin-top:0.2rem}
+
+/* fcms common button */
+.fcms-btns-secondary {display:inline-block; width:100%; height:0.82rem; padding:0 0.1rem; font-size:0.32rem; font-weight:700; color:#222; text-align:center; border:solid 0.02rem #ddd; border-radius:0.15rem; background:#fff; box-sizing:border-box}
+.fcms-btn-box {display:flex; margin-bottom:0.2rem}
+.screen-only+.fcms-btn-box {margin-top:0.6rem}
+.fcms-btn-box> * {width:100%}
+.fcms-btn-box> * + * {margin-left:0.2rem}
+.fcms-tab-content .fcms-btn-box {display:block; margin-right:-0.5rem; margin-left:-0.5rem; white-space:nowrap; text-align:center}
+.fcms-tab-content .fcms-btn-box .fcms-btns-secondary {width:4.6rem}
+.fcms-tab-content .fcms-btn-box.two-up .fcms-btns-secondary {width:2.2rem}
+
+/* fcms common textList */
+.fcms-dashList-type1 {line-height:0.38rem}
+.fcms-dashList-type1 li {margin-top:0.16rem}
+.fcms-dashList-type1 > li {position:relative; padding-left:0.16rem; font-size:0.26rem}
+.fcms-dashList-type1 > li:before {content:""; display:block; position:absolute; left:0; top:0.18rem; width:0.1rem; height:0.02rem; background-color:#222}
+.fcms-dashList-type1 > li ul, .fcms-dashList-type1 > li ol {margin-top:0.16rem}
+.fcms-dashList-type1.guidepo {margin-top:0.4rem; padding:0; padding-top:1.6rem;background:#fbfbfb url(https://www.dgb.co.kr/cms/cmshtml/img/finance/kdic_small_ico.png) center top no-repeat; background-size:2.18rem auto; background-color:#fff}
+.fcms-dashList-type1.guidepo.type2{background-image:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/kdic_small_ico2.png)}
+.fcms-dotList-type1 {line-height:0.38rem}
+.fcms-dotList-type1 li {margin-top:0.16rem}
+.fcms-tab-content.fcms .fcms-dotList-type1 li {margin-top:0.16rem}
+.fcms-dotList-type1 > li {position:relative; padding-left:0.16rem; font-size:0.26rem}
+.fcms-dotList-type1 > li:before {content:""; display:block; position:absolute; left:0; top:0.18rem; width:0.04rem; height:0.04rem; border-radius:50%; background-color:#222}
+.fcms-dotList-type1 > li:first-child {margin-top:0}
+table + .fcms-dotList-type1 {margin-top:0.24rem}
+.fcms-dotList-type1 li .small_log a {font-weight:700; vertical-align:baseline}
+.suptxt {line-height:1.5; font-size:0.24rem}
+.suptxt sup {font-size:0.2rem;}
+sup.sup {font-size:0.2rem; vertical-align:super}
+
+/*당구장*/
+.fcms-billiardList-type1 {line-height:0.38rem}
+.fcms-billiardList-type1 li {margin-top:0.16rem}
+.fcms-tab-content.fcms .fcms-billiardList-type1 li {margin-top:0.16rem}
+.fcms-billiardList-type1 > li {position:relative; padding-left:0.18rem; font-size:0.26rem}
+.fcms-billiardList-type1 > li:before {content:"※"; display:inline-block; margin-right:0.09rem; margin-left:-0.18rem}
+table + .fcms-billiardList-type1 {margin-top:0.24rem}
+.fcms-conlist-type1+.fcms-billiardList-type1 {margin-top:0.16rem}
+
+/*(font12) table bottom*/
+.fcms-starList-type1 {line-height:0.36rem}
+.fcms-starList-type1 > li {position:relative; padding-left:0.18rem; font-size:0.24rem}
+.fcms-starList-type1 > li:before {content:"*"; display:inline-block; margin-right:0.09rem; margin-left:-0.18rem; vertical-align:text-top}
+table + .fcms-starList-type1 {margin-top:0.24rem}
+.fcms-billiardList-type2 {line-height:0.36rem}
+.fcms-billiardList-type2 li {margin-top:0.16rem}
+.fcms-tab-content.fcms .fcms-billiardList-type2 li {margin-top:0.16rem}
+.fcms-billiardList-type2 > li {position:relative; padding-left:0.18rem; font-size:0.24rem}
+.fcms-billiardList-type2 > li:before {content:"※"; display:inline-block; margin-right:0.09rem; margin-left:-0.18rem}
+
+/*숫자공통*/
+.fcms-numList-type1 {line-height:0.38rem}
+.fcms-numList-type1 > li {margin-top:0.16rem; padding-left:0.32rem; font-size:0.26rem}
+.fcms-tab-content.fcms .fcms-numList-type1 > li {margin-top:0.16rem}
+.fcms-numList-type1 .f-letter {margin-left:-0.32rem}
+
+/*오른쪽 화살표 특수문자*/
+.fcms-codeList-type1 {line-height:0.38rem}
+.fcms-codeList-type1 li {margin-top:0.16rem}
+.fcms-tab-content.fcms .fcms-codeList-type1 li {margin-top:0.16rem}
+.fcms-codeList-type1 > li {position:relative; padding-left:0.26rem; font-size:0.26rem}
+.fcms-codeList-type1 > li:before {content:""; display:block; position:absolute; left:0; top:0.1rem; width:0.2rem; height:0.24rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-racode-type1.png) center top no-repeat; background-size:100% auto}
+.fcms-codeList-type1 > li:first-child {margin-top:0}
+
+/* fcms common tab */
+.fcms-xtab-type1 {position:relative; width:100%; font-size:0; text-align:center}
+.fcms-xtab-type1 li {display:inline-block}
+.fcms-xtab-type1 li .btns {display:block; position:relative; width:100%; height:1rem; padding:0 0.34rem; color:#222; font-size:0.3rem; font-weight:700; border-bottom:0.08rem solid #d9d9d9; background:#fff; text-align:center}
+.fcms-xtab-type1 li .btns span {white-space:nowrap}
+.fcms-xtab-type1 li.is-active .btns {color:#9c27b0; border-bottom:0.08rem solid #9c27b0}
+
+/*main pick*/
+.fcms-xtab-type1.item-five-up {display:flex}
+.fcms-xtab-type1.item-five-up li {position:relative; width:20%}
+.fcms-xtab-type1.item-five-up li .btns {position:static; padding-left:0; padding-right:0}
+
+/*신규 탭 스타일2 (기존 디자인유형)*/
+.fcms-xtab-type2 {position:relative; font-size:0}
+.fcms-xtab-type2 li {display:inline-block; padding-bottom:0.04rem}
+.fcms-xtab-type2 li .btns {display:inline-block; min-width:1.5rem; margin:0 0.2rem 0 0; padding:0.16rem 0.28rem 0.14rem 0.28rem; color:#222; font-size:0.28rem; font-weight:700; border:0.02rem solid #ddd; border-radius:0.5rem; background:#fff; text-align:center; box-sizing:border-box; outline:none}
+ .fcms-xtab-type2 li a.btns {line-height:0.65rem}
+.fcms-xtab-type2 li .btns span {display:inline-block; vertical-align:top; white-space:nowrap}
+.fcms-xtab-type2 li.is-active .btns {color:#fff; border:0.02rem solid #222; background:#222}
+
+/*Tab Type (scroll)*/
+.tab-xscroll-wrap {position:relative}
+.tab-xscroll-wrap .tab-xscroll {position:relative; overflow-x:auto; overflow-y:hidden; padding-bottom:0.02rem; -webkit-overflow-scrolling:touch; *zoom:1}
+.tab-xscroll-wrap .tab-xscroll::-webkit-scrollbar {-webkit-appearance:none}
+.tab-xscroll-wrap .tab-xscroll::-webkit-scrollbar-thumb {background-color:transparent; -webkit-box-shadow:0 0 0 0 rgba(0,0,0,0)}
+.tab-xscroll-wrap .tab-xscroll ul {white-space:nowrap}
+
+/*border*/
+.tab-xscroll-wrap.type1 {position:relative}
+.tab-xscroll-wrap.type1 .tab-xscroll {padding-bottom:0}
+
+/*xScrollTab button fixed*/
+.fprodlist-yscroll-wrap {position:relative; height:1rem; box-sizing:border-box}
+.fprodlist-yscroll-wrap .tab-xscroll-wrap {position:fixed; left:0; right:0; top:1.1rem; z-index:11; padding-bottom:0}
+
+/*상품상세*/
+.fcms-yscroll-wrap {position:relative; height:0.7rem; margin:0 -0.4rem; box-sizing:border-box}
+.fcms-yscroll-wrap .tab-xscroll-wrap {height:0.7rem}
+.fcms-yscroll-wrap .tab-xscroll-wrap .tab-xscroll ul {padding-left:0.3rem}
+.fcms-yscroll-wrap.is-fixed .tab-xscroll-wrap {position:fixed; left:0; right:0; top:1.1rem; z-index:1111; padding:0.2rem 0; background:#fff; box-shadow:0 0 1px rgb(0 0 0 / 15%)}
+
+/* fcms common Icn */
+.icns-callnum {position:relative}
+.icns-callnum:before {content:''; display:none; vertical-align:middle; width:0.32rem; height:0.32rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-callnum.png) center center no-repeat; background-size:100% auto}
+.fcms-icns-wrap {text-align:center}
+.fcms-icns-type1 {position:relative; z-index:2; overflow:hidden; overflow-x:auto;  margin-top:0.6rem;  padding:0 0.4rem; white-space:nowrap; -webkit-overflow-scrolling:touch; *zoom:1}
+.fcms-icns-type1::-webkit-scrollbar {-webkit-appearance:none}
+.fcms-icns-type1::-webkit-scrollbar-thumb {background-color:transparent; -webkit-box-shadow:0 0 0 0 rgba(0,0,0,0)}
+.fprodview-wrap .fcms-icns-type1 {margin-left:-0.4rem; margin-right:-0.4rem}
+.fprodview-head .fcms-icns-type1 {margin-top:0.5rem}
+.fcms-icns-type1 li {display:inline-block}
+.fcms-icns-type1 li .icns {display:inline-block; padding:0 0.1rem; font-size:0.24rem; color:#222; text-align:center; box-sizing:border-box}
+.fcms-icns-type1 li .icns span {position:relative}
+.fcms-icns-type1 li .icns span:before {content:''; display:block; width:0.64rem; height:0.64rem; margin:0 auto 0.1rem auto; box-sizing:border-box; background-size:100% auto !important}
+.fcms-icns-type1 li .icns.icns_cardsvc01 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc01.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc02 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc02.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc03 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc03.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc04 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc04.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc05 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc05.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc06 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc06.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc07 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc07.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc08 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc08.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc09 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc09.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc11 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc11.png) center center no-repeat}
+.fcms-icns-type1 li .icns.icns_cardsvc12 span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_cardsvc12.png) center center no-repeat}
+
+/*caution*/
+.icns-caution-wrap {margin-top:0.4rem; color:#222;font-size:0.28rem; font-weight:700}
+
+/*상품상세 head*/
+.fprodview-head p.icns-caution-wrap+p{margin-top:0.2rem; font-size:0.26rem; line-height:1.5}
+
+/*상품상세 body*/
+.fcms-tab-content.fcms > ul+p.icns-caution-wrap {margin-top:0.4rem}
+.fcms-tab-content.fcms > ul+p.icns-caution-wrap+p{margin-top:0.2rem}
+.fcms-section-wrap.type-basic+.icns-caution-wrap {margin-top:0.84rem}
+.icns-caution-type1 {display:inline-block; line-height:1; margin-right:0.1rem; padding:0.1rem 0.24rem; border:1px solid #9c27b0; border-radius:0.3rem; color:#9c27b0; font-size:0.24rem}
+
+/* fcms common textStyle */
+.fcms-pcolor {color:#9c27b0 !important}
+
+/* fcms common textBox */
+.fcms-textBox-type1 {min-height:; padding:0.6rem; border-radius:0.3rem; background-color:#f5f5f5}
+.fcms-textBox-type1 .inbox {position:relative}
+.fcms-textBox-type1 .inbox .con {font-size:0.26rem; line-height:0.38rem}
+.fcms-textBox-type1.icns-caution .inbox {padding-top:1.2rem}
+
+/* fcms common table */
+.layout-fixed {table-layout:fixed !important}
+.table-gtxt {margin-bottom:0.1rem; color:#898989; text-align:right}
+
+/*.fcms-table-type1*/
+.fcms-table-type1 {border-top:0.04rem solid #b3b3b3;border-bottom:0.02rem solid #ececec}
+.fcms-table-type1 thead tr {border-top:0.02rem solid #ececec}
+.fcms-table-type1 thead tr:first-child {border-top:0}
+.fcms-table-type1 thead th {padding:0.28rem 0.04rem; border-right:0.02rem solid #ececec; background-color:#f8f8f8; color:#222; font-size:0.24rem; text-align:center}
+.fcms-table-type1 thead th:last-child {border-right:0}
+.fcms-table-type1 tbody tr {border-top:0.02rem solid #ececec}
+.fcms-table-type1 tbody tr:last-child {border-bottom:0.02rem solid #ececec}
+.fcms-table-type1 tbody th {padding:0.28rem 0.1rem; border-right:0.02rem solid #ececec; background-color:#f8f8f8; font-size:0.24rem; line-height:0.36rem; text-align:center}
+.fcms-table-type1 tbody th:last-child {border-right:0}
+.fcms-table-type1 tbody td {padding:0.28rem 0.1rem; border-right:0.02rem solid #ececec; font-size:0.24rem; line-height:0.36rem; text-align:center}
+.fcms-table-type1 tbody td .fcms-dashList-type1 > li {font-size:0.24rem}
+.fcms-table-type1 tbody td:last-child {border-right:0}
+.fcms-table-type1 sup {font-size:0.2rem; vertical-align:super}
+.fcms-table-type1+.suptxt {margin-top:17px; margin-top:0.1rem}
+
+/*.fcms-table-type2 - 금리안내 테이블*/
+.fcms-table-type2 {border-top:0.02rem solid #b3b3b3;border-bottom:0.02rem solid #ececec}
+.fcms-table-type2 thead tr {border-top:0.02rem solid #ececec}
+.fcms-table-type2 thead tr:first-child {border-top:0}
+.fcms-table-type2 thead th {padding:0.28rem 0.04rem; border-right:0.02rem solid #ececec; background-color:#f8f8f8; color:#222; font-size:0.24rem; text-align:center}
+.fcms-table-type2 thead th:last-child {border-right:0}
+.fcms-table-type2 tbody tr {border-top:0.02rem solid #ececec}
+.fcms-table-type2 tbody tr:last-child {border-bottom:0.02rem solid #ececec}
+.fcms-table-type2 tbody th {padding:0.28rem 0.1rem; border-right:0.02rem solid #ececec; background-color:#f8f8f8; font-size:0.24rem; line-height:0.36rem; text-align:center}
+.fcms-table-type2 tbody th:last-child {border-right:0}
+.fcms-table-type2 tbody td {padding:0.28rem 0.1rem; border-right:0.02rem solid #ececec; font-size:0.24rem; line-height:0.36rem; text-align:center}
+.fcms-table-type2 tbody td .fcms-dashList-type1 > li {font-size:0.24rem}
+.fcms-table-type2 tbody td:last-child {border-right:0}
+.fcms-table-type2 sup {font-size:0.2rem; vertical-align:super}
+.fcms-table-type2+.suptxt {margin-top:17px; margin-top:0.02rem}
+
+/* financial product view (fcms content) */
+.fprodview-wrap.card .fmall-htitle {font-size:0.4rem;text-align:center}
+.fprodmsg-wrap {padding-top:0rem; text-align:left}
+.fprodmsg-wrap .fmall-htitle {color:#9c27b0; font-size:0.32rem; font-weight:500; line-height:0.44rem; letter-spacing:-0.05em}
+.fprodmsg-wrap .fprodpraise {color:#000; font-size:0.5rem; line-height:0.72rem}
+.fprodmsg-wrap .fprodpraise>span {display:block; margin-bottom:0.16rem; padding-right:0.4rem;font-weight:500}
+.fprodmsg-wrap .fprodpraise strong {display:inline-block; font-weight:normal}
+.icns.icns-fprdftr-limit:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-limit.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-interest:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-interest.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-ainterest:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-ainterest.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-period:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-period.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-cperiod:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-cperiod.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-minterest:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-minterest.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-cmoney:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-cmoney.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-clevy:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-clevy.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-ctarget:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-ctarget.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-csimple:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-csimple.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-mnylimit:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-mnylimit.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-ratio:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-ratio.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdftr-levy:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdftr-levy.png) center center no-repeat; background-size:100% auto}
+.fprodfeature-wrap.new{margin-top:0.54rem;padding-bottom:0}
+.fprodfeature-wrap.new .top-interest{margin-bottom:0.22rem;min-height:1.6rem}
+.fprodfeature-wrap.new .top-interest .tit{font-size:0.32rem;color:#222}
+.fprodfeature-wrap.new .top-interest .tit > strong{margin:0 0.06rem 0 0;font-size:0.5rem;font-weight:700}
+.fprodfeature-wrap.new .top-interest .tit > span{font-size:0.54rem;color:#9c27b0;font-weight:500}
+.fprodfeature-wrap.new .top-interest .tit > span strong{font-weight:700}
+.fprodfeature-wrap.new .top-interest .txt{font-size:0.2rem;color:#888}
+.fprodfeature-wrap.new .fprodfeature-list{display:block;margin:0;font-size:0;text-align:left}
+.fprodfeature-wrap.new .fprodfeature-list li{vertical-align:top;box-sizing:border-box}
+.fprodfeature-wrap.new .fprodfeature-list li + li{padding-left:0.2rem}
+.fprodfeature-wrap.new .fprodfeature-list .br{display:block;margin:0.2rem 0 0 0}
+.fprodfeature-wrap.new .fprodfeature-list li:first-child{min-width:46%}
+.fprodfeature-wrap.new .fprodfeature-list li dl{position:relative;padding:0 0 0 0.8rem;text-align:left}
+.fprodfeature-wrap.new .fprodfeature-list li dl dt{padding:0.04rem 0;font-size:0.2rem;color:#929292}
+.fprodfeature-wrap.new .fprodfeature-list li dl dd{font-size:0.32rem;color:#222}
+.fprodfeature-wrap.new .fprodfeature-list li .icns{position:absolute;left:0;top:0}
+.fprodfeature-wrap.new .fprodfeature-list>li dd .gtxt {display:inline-block;color:#888; font-size:0.26rem; line-height:1.2;font-weight:500; letter-spacing:0}
+
+/*product feature*/
+.fprodfeature-wrap {padding-bottom:0.46rem}
+.fprodfeature-list {display:flex; flex-direction:row; justify-content:space-evenly; margin-top:1.2rem}
+.fprodfeature-list>li {display:inline-block; position:relative; text-align:center}
+.fprodfeature-list>li .icns {display:block; text-align:center}
+.fprodfeature-list>li .icns:before {content:''; display:inline-block; width:0.6rem; height:0.6rem; margin-bottom:0.12rem}
+.fprodfeature-list>li dl {padding:0 0.17rem; letter-spacing:-0.05em}
+.fprodfeature-list>li dt {padding:0 0.17rem; padding-bottom:0.08rem; color:#222; font-size:0.24rem; line-height:1; white-space:nowrap}
+.fprodfeature-list>li dd {color:#222; font-size:0.40rem; font-weight:700; line-height:0.44rem}
+.fprodfeature-list>li dd strong {font-family:'pass', sans-serif; font-weight:900; line-height:1}
+.fprodfeature-list>li dd .gtxt {display:block; margin-top:0.04rem; color:#888; font-size:0.2rem; line-height:0.2rem; letter-spacing:0}
+
+/*퇴직연금 - 보유상품변경 별도타입*/
+.fprodfeature-list.txts-type1>li .icns:before {margin-bottom:0}
+.fprodfeature-list.txts-type1>li .icns:before {width:1rem; height:1rem}
+.fprodfeature-list.txts-type1>li dd strong {color:#222}
+.icns.icns-irpchange-select:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-irpchange-select.png) center center no-repeat; background-size:0.6rem auto}
+.icns.icns-irpchange-method:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-irpchange-method.png) center center no-repeat; background-size:0.6rem auto}
+.icns.icns-irpchange-guide:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-irpchange-guide.png) center center no-repeat; background-size:0.6rem auto}
+
+/*추천코맨트*/
+.fcms-recommand-list:after {content:''; display:block; clear:both}
+.fcms-tab-content.fcms .fcms-title-type1+.fcms-recommand-list {margin-top:0.4rem; margin-right:-0.2rem; margin-left:-0.2rem}
+.fcms-recommand-list li {margin-top:0.34rem}
+.fcms-tab-content.fcms > ul.fcms-recommand-list li {margin-top:0.34rem}
+.fcms-recommand-list li:first-child {margin-top:0}
+.fcms-recommand-list li .listitem {display:inline-block; width:80%}
+.fcms-recommand-list li .msg-wrap {position:relative; padding:0.16rem 0.3rem; border-radius:0.2rem; font-size:0.26rem; font-weight:700}
+.fcms-recommand-list li .msg-wrap:after {content:''; display:block; position:absolute; width:0.3rem; height:0.2rem; background-size:100% auto !important}
+.fcms-recommand-list li .msg-wrap * {margin-top:0; text-align:left}
+.fcms-recommand-list li.cRight {text-align:right}
+.fcms-recommand-list li.cRight .listitem .msg-wrap {background:#418cff; color:#fff}
+.fcms-recommand-list li.cRight .listitem .msg-wrap:after {bottom:-0.025rem; right:-0.07rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_msg_wrap_cright.png) center center no-repeat}
+.fcms-recommand-list li.cLeft {text-align:left}
+.fcms-recommand-list li.cLeft .listitem .msg-wrap {background:#e1e1e1; color:#222}
+.fcms-recommand-list li.cLeft .listitem .msg-wrap:after {bottom:-0.02rem; left:-0.08rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_msg_wrap_cleft.png) center center no-repeat}
+.fcms-recommand-list li .etc-wrap {margin-top:0.06rem; color:#222; font-size:0.24rem; line-height:0.36rem}
+.fcms-recommand-list li .etc-wrap p {padding:0 0.38rem}
+
+/* fcms content bottom (.fcms outer position) */
+.fprodview-body .cmm-list-toggle > .list {border-bottom:1px solid #f5f5f5}
+.fprodview-body .financial-list li {border-radius:0.3rem; border:0.02rem solid #e4e4e4}
+.cmm-list-toggle.type-fcms {margin:0; margin-top:0.54rem}
+.cmm-list-toggle.type-fcms .list {margin:0 -0.6rem}
+.cmm-list-toggle.type-fcms .list > a {padding:0.3rem 0.5rem}
+.cmm-list-toggle.type-fcms .list > a::after {content:''; display:block; position:absolute; right:0.6rem; top:50%; z-index:1; width:0.16rem; height:0.28rem; margin-top:-0.14rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_ra_type3.png) center center no-repeat; background-size:100% auto; transform:rotate(0)}
+.cmm-list-toggle.type-fcms .list > a {border-top:solid 0.02rem #f5f5f5}
+.fcms-txt-btm {margin-top:0.6rem; font-size:0.24rem; line-height:0.36rem;text-align:center}
+.card .fcms-txt-btm{text-align:left}
+.fprodview-head .fprodshare-wrap {position:absolute; right:-0.14rem; top:0.16rem}
+.fprodview-wrap.card .fprodshare-wrap {top:0}
+.fprodshare-wrap .fprodshare-inner {position:relative}
+.fprodshare-btn {display:inline-block}
+.fprodshare-btn span {display:block; position:relative; text-align:center; white-space:nowrap;width:0.44rem; height:0.44rem;font-size:0.2rem; color:rgba(255,255,255,0);vertical-align:top}
+.fprodshare-btn span:before {content:''; position:absolute;left:0;top:0;width:0.44rem; height:0.44rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_fprodshare_share.png) center center no-repeat; background-size:100% auto}
+
+/* fcms common banner */
+.fcms-banner-type1 {margin:0 -0.4rem}
+.fcms-recommand-list+.fcms-banner-type1 {margin:0 -0.6rem}
+.fcms-banner-type1 a {display:block}
+.fcms-banner-type1 img {width:100%}
+.fcms-banner-type1.bottom {margin-bottom:-0.4rem}
+.fcms-recommand-list+.fcms-banner-type1 {margin-top:0.6rem}
+.fcms-banner-type2 {margin:0 -0.2rem}
+.fcms-banner-type2 a {display:block; overflow:hidden; border-radius:0.3rem}
+.fcms-banner-type2 img {width:100%; border-top:0.02rem solid #f5f5f5}
+.fcms-title-type1+.fcms-banner-type2 {margin-top:0.32rem; margin-bottom:0.1rem}
+
+/* financial product view (fcms content - category detail) */
+.fcms-badge-type1 {display:inline-block; position:relative; line-height:1; padding:0.08rem 0.16rem 0.06rem 0.16rem; border-radius:0.06rem; background-color:#ff6b6b; font-size:0.24rem; color:#fff; text-align:center; vertical-align:text-bottom}
+.fmall-htitle .fcms-badge-type1 {margin-left:0.1rem;top:-0.04rem;background-color:#9c27b0}
+.fprodvisual-wrap {margin-top:0.5rem; text-align:center}
+.fprodvisual-wrap img {width:50%}
+.fprodinfo-wrap {margin:0 -0.5rem -0.4rem -0.5rem; padding:0 0.7rem; border-top:0.04rem solid #f5f5f5}
+.fprodinfo-wrap dt {float:left; padding:0.28rem 0 0.32rem 0; line-height:0.44rem; color:#222; font-size:0.32rem; font-weight:700}
+.fprodinfo-wrap dd {margin-left:2rem; padding:0.16rem 0; min-height:0.8rem; line-height:0.38rem; color:#222; font-size:0.26rem; box-sizing:border-box; overflow:hidden}
+.fprodinfo-wrap dt:first-child+dd {padding-top:0.30rem}
+.fprodinfo-wrap dd:last-child {padding-bottom:0.30rem}
+.fprodinfo-wrap dd>span {display:block; vertical-align:top}
+.fprodinfo-wrap dd>span img {display:block; width:auto; height:0.4rem}
+
+/*카드 유튜브 동영상*/
+.fcms-embed-youtube {position:relative; width:100%; height:auto; margin:0.54rem 0; padding-bottom:56.25%}
+.fcms-embed-youtube iframe {position:absolute; top:0; left:0; width:100%; height:100%}
+
+/* cms product view - loan */
+.layer-popup.fcms-type h2 {border-bottom:0; font-family:'Pretendard';  font-weight:700; text-align:center}
+.layer-popup.fcms-type .content {padding:0.5rem; padding-top:0.3rem; min-height:7.5rem; font-size:0.3rem; text-align:left; box-sizing:border-box; z-index:1}
+.layer-popup.fcms-type .cmm-row-scroll {overflow:auto; position:absolute; left:0.5rem; right:0.5rem; top:1.1rem; bottom:0.5rem; padding:0 0 0.3rem 0; width:auto; box-sizing:border-box}
+.layer-popup.fcms-type .cmm-form ~ .cmm-row-scroll {top:3.38rem}
+.cmm-form.fcms-form-type1 label {display:block; position:relative; margin:0 0 0.3rem 0; font-size:0.32rem; color:#222; font-family:'Pretendard'; font-weight:700; letter-spacing:0}
+.cmm-form.fcms-form-type1 .ui-select .ui-btn span {display:block; padding:0px 0.3rem 0px 0px; width:100%; height:0.81rem; line-height:0.81rem; margin:0px !important; padding:0 1rem 0 0.24rem; border:1px solid #ddd; border-radius:5px; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/cmm_form_fcms.png) 95% center / 0.18rem no-repeat; box-sizing:border-box; font-size:0.3rem; color:#222; text-align:left; vertical-align:top}
+
+/*tab*/
+.cmm-tab-box.fcms-tab-type1 {position:relative; overflow:hidden; overflow-x:auto; margin:0.1rem -0.5rem 0.26rem -0.5rem; padding:0 0.5rem; white-space:nowrap; background:#fff; box-shadow:none; z-index:2}
+.cmm-tab-box.fcms-tab-type1:first-child > *{padding-top:0}
+.cmm-tab-box.fcms-tab-type1 > *{display:inline-block; margin-right:0.3rem; padding:0.25rem 0 0.1rem 0; font-size:0.3rem; color:#666}
+.cmm-tab-box.fcms-tab-type1 > *:last-child{margin-right:0.25rem}
+.cmm-tab-box.fcms-tab-type1 .active {position:relative; color:#222}
+.cmm-tab-box.fcms-tab-type1 .active:after {content:''; display:block; position:absolute; left:0; right:0; bottom:0; height:0.02rem; background-color:#000}
+.fcms-tab-content .screen-only+.fcms-section-wrap {margin-top:0}
+.fcms-section {font-weight:normal}
+.fcms-section-inbox {position:relative; padding:1.04rem 0 0 0; text-align:center}
+.fcms-section-inbox img {width:100%}
+.fcms-section:first-child .fcms-section-inbox {padding-top:0.6rem}
+.fcms-section.type-bg .fcms-section-inbox:after {content:''; display:inline-block; width:100%; height:100%; margin-top:0.5rem; background-size:auto 100% !important}
+.fcms-section-inbox .fcms-section-tit {line-height:0.44rem; color:#222; font-size:0.40rem; font-weight:700}
+.fcms-section-inbox .fcms-subtxt {line-height:1.5; margin-top:0.2rem; color:#222; font-size:0.24rem}
+.fcms-section .fcms-subtxt-btm {line-height:1.5; margin-top:0.14rem; color:#222; font-size:0.24rem; text-align:center}
+.fcms-section-wrap.no-gap-top .fcms-section:first-child .fcms-section-inbox {padding-top:0}
+.fcms-section-wrap.no-gap-top .fcms-conlist-type1 > li:first-child {margin-top:0}
+
+/*토닥토닥 서민&중금리대출*/
+.fcms-section.type-bg.bg_loan_people1 .fcms-section-inbox:after {height:214px; height:4.28rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_people1.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_people2 .fcms-section-inbox:after {height:174px;  height:3.48rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_people2.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_people3 .fcms-section-inbox:after {height:152px;  height:3.04rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_people3.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_people4 .fcms-section-inbox:after {height:119px;  height:2.38rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_people4.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_people5 .fcms-section-inbox:after {height:126px;  height:2.52rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_people5.png) center center no-repeat; background-size:100% auto !important}
+
+/*IM직장인 간편신용대출*/
+.fcms-section.type-bg.bg_loan_simplefor1 .fcms-section-inbox:after {height:157px; height:3.14rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_simplefor1.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_simplefor2 .fcms-section-inbox:after {height:148px; height:2.98rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_simplefor2.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_simplefor3 .fcms-section-inbox:after {height:191px; height:3.82rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_simplefor3.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_simplefor4 .fcms-section-inbox:after {height:174px; height:3.48rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_simplefor4.png) center center no-repeat}
+
+/*무방문 전세자금대출*/
+.fcms-section.type-bg.bg_loan_onlinejeonse1 .fcms-section-inbox:after {height:196px; height:3.88rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_onlinejeonse1.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_onlinejeonse2 .fcms-section-inbox:after {height:139px; height:2.78rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_onlinejeonse2.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_onlinejeonse3 .fcms-section-inbox:after {height:191px; height:3.82rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_onlinejeonse3.png) center center no-repeat}
+
+/*DGB무방문 주택담보대출*/
+.fcms-section.type-bg.bg_loan_securitydgb1 .fcms-section-inbox:after {height:138px; height:2.76rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_securitydgb1.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_securitydgb2 .fcms-section-inbox:after {height:174px; height:3.48rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_securitydgb2.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_securitydgb3 .fcms-section-inbox:after {height:120px; height:2.4rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_securitydgb3.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_securitydgb4 .fcms-section-inbox:after {height:116px; height:2.32rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_securitydgb4.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_securitydgb5 .fcms-section-inbox:after {height:214px; height:4.28rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_securitydgb5.png) center center no-repeat}
+
+/*DGB쓰담쓰담 간편대출(일반분할)*/
+.fcms-section.type-bg.bg_loan_simpledgb1 .fcms-section-inbox:after {height:138px; height:2.76rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_simpledgb1.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_simpledgb2 .fcms-section-inbox:after {height:149px; height:2.98rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_simpledgb2.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_simpledgb3 .fcms-section-inbox:after {height:161px; height:3.22rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_simpledgb3.png) center center no-repeat}
+
+/*무방문 예금담보대출*/
+.fcms-section.type-bg.bg_loan_onlinesecurity1 .fcms-section-inbox:after {height:152px; height:3.04rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_onlinesecurity1.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_onlinesecurity2 .fcms-section-inbox:after {height:174px; height:3.48rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_onlinesecurity2.png) center center no-repeat}
+.fcms-section.type-bg.bg_loan_onlinesecurity3 .fcms-section-inbox:after {height:116px; height:2.32rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_onlinesecurity3.png) center center no-repeat}
+
+/*IM오토론(신차)*/
+.fcms-section.type-bg.bg_loan_autonew1 .fcms-section-inbox:after {height:176px;  height:3.52rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_autonew1.png) center center no-repeat}
+
+/*IM오토론(중고차)*/
+.fcms-section.type-bg.bg_loan_autoused1 .fcms-section-inbox:after {height:176px;  height:3.52rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_loan_autoused1.png) center center no-repeat}
+
+/*개인형 irp*/
+.fcms-section.type-bg.bg_pension_irp1 .fcms-section-inbox {padding-bottom:1.1rem}
+.fcms-section.type-bg.bg_pension_irp1 .fcms-section-inbox:after {height:222px;  height:4.44rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_pension_irp1.png) center center no-repeat}
+.fcms-section.type-bg.bg_pension_irp1 .fcms-section-inbox .fcms-conlist-type2 {position:absolute; right:0; left:0; bottom:0}
+.fcms-section.type-bg.bg_pension_irp2 .fcms-section-inbox:after {height:157px;  height:3.14rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_pension_irp2.png) center center no-repeat}
+
+/*운용방법 및 비율등록*/
+.fcms-section.type-bg.bg_pension_irpguide1 .fcms-section-inbox:after {height:161px; height:3.22rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_pension_irpguide1.png) center center no-repeat}
+.fcms-section.type-bg.bg_pension_irpguide2 .fcms-section-inbox:after {height:96px; height:1.92rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_pension_irpguide2.png) center center no-repeat; background-size:100% auto !important}
+
+/*운용방법 및 비율등록*/
+.fcms-section.type-bg.bg_pension_irpchange1 .fcms-section-inbox:after {height:161px; height:3.22rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_pension_irpchange1.png) center center no-repeat}
+.fcms-section.type-bg.bg_pension_irpchange2 .fcms-section-inbox:after {height:142px; height:2.84rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_pension_irpchange2.png) center center no-repeat}
+
+/*(상세 공통) 상품요약소개 step*/
+.fcms-conlist-type1 {position:relative}
+.fcms-conlist-type1:before {content:''; display:block; position:absolute; left:0.05rem; top:0.16rem; width:1px; height:calc(100%); border-left:1px dashed #ddd}
+.fcms-conlist-type1 > li {position:relative; margin-top:0.3rem}
+.fcms-conlist-type1 > li:before {content:''; display:block; position:absolute; left:0; top:0.16rem; width:0.12rem; height:0.12rem; border-radius:50%; background:#9c27b0}
+.fcms-conlist-type1 > li:first-child {margin-top:0.5rem}
+.fcms-conlist-type1 > li:last-child:after {content:''; display:block; position:absolute; left:0.05rem; top:0.28rem; width:1px; height:100%; background:#fff}
+.fcms-conlist-type1 > li .listitem {position:relative; padding-left:1.78rem}
+.fcms-conlist-type1 > li .listnum {display:inline-block; position:absolute; left:0.28rem; top:0.04rem; padding:0.06rem 0.18rem; border:1px solid #9c27b0; color:#9c27b0; font-size:0.24rem; font-weight:700; line-height:1; border-radius:25px}
+.fcms-conlist-type1 > li .listnum span {display:inline-block; vertical-align:top; line-height:1}
+.fcms-conlist-type1 > li .listtxt {text-align:left}
+.fcms-conlist-type1 > li .listtxt dt {color:#222; font-size:0.28rem; font-weight:700; line-height:0.44rem}
+.fcms-conlist-type1 > li .listtxt dd {margin-top:0.08rem; color:#222; font-size:0.24rem; line-height:1.5}
+.fcms-conlist-type1 > li .listtxt-type2 {text-align:left}
+.fcms-conlist-type1 > li .listtxt-type2:after {content:''; display:block; clear:both}
+.fcms-conlist-type1 > li .listtxt-type2 dt {float:left; width:0.93rem; color:#222; font-size:0.28rem; font-weight:700; line-height:0.44rem}
+.fcms-conlist-type1 > li .listtxt-type2 dd {float:left; width:calc(100% - 0.93rem); color:#222; font-size:0.24rem; line-height:0.44rem}
+
+/*개인형 퇴직연금IRP 이미지 하단*/
+.fcms-conlist-type2 {display:flex; justify-content:center}
+.fcms-conlist-type2 > li p {padding:0 0.2rem; color:#222; font-size:0.24rem; line-height:1.3}
+.fcms-conlist-type2 > li p strong {font-size:0.32rem; font-weight:700}
+.fcms-conlist-type2 > li .gtxt {display:block; margin-top:0.04rem; color:#222; font-size:0.24rem; line-height:0.32rem}
+.fcms-conlist-type2.sp-type > li:last-child {padding-left:0.72rem}
+
+/*무방문 전세자금대출 - 필수확인사항*/
+.fprodcondition-list {font-size:0}
+.fprodcondition-list>li {display:inline-block; vertical-align:top; position:relative; width:50%; margin-top:0.6rem; text-align:center}
+.fprodcondition-list>li .icns {display:block; text-align:center}
+.fprodcondition-list>li .icns:before {content:''; display:inline-block; width:0.6rem; height:0.6rem; margin-top:0.3rem; margin-bottom:0.14rem}
+.fprodcondition-list>li dl {padding:0 0.17rem; letter-spacing:-0.05em}
+.fprodcondition-list>li dt {color:#222; font-size:0.32rem; font-weight:700; line-height:1; white-space:nowrap}
+.fprodcondition-list>li dd {color:#222; font-size:0.24rem; line-height:0.36rem}
+.fprodcondition-list>li dd strong {color:#9c27b0; font-family:'pass', sans-serif; font-size:0.36rem; font-weight:900; line-height:1}
+.fprodcondition-list>li dd .gtxt {display:block; margin-top:0.04rem; color:#888; font-size:0.2rem; line-height:0.32rem; letter-spacing:0; white-space:nowrap}
+
+/*type2(dt screen only)*/
+.fprodcondition-list.icns-type2>li:first-child,
+.fprodcondition-list.icns-type2>li:first-child+li {margin-top:0}
+.icns.icns-fprdcdt-target:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-target.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdcdt-htype:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-htype.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdcdt-timing:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-timing.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdcdt-period:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-period.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdcdt-impossible:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-impossible.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdcdt-agree:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-agree.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdcdt-contract:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-contract.png) center center no-repeat; background-size:100% auto}
+.icns.icns-fprdcdt-receipt:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fprdcdt-receipt.png) center center no-repeat; background-size:100% auto}
+
+/*좌우테이블형태*/
+.ul-flist-wrap+.fcms-title-type1 {margin-top:0.78rem}
+.ul-flist-type1:after {content:''; display:block; clear:both}
+.ul-flist-type1 .item {margin-top:0.2rem}
+.ul-flist-type1 .item:first-child {margin-top:0.12rem}
+.dl-flist-type1 {display:table; width:100%}
+.dl-flist-type1 dt {display:table-cell; width:1.76rem; color:#222; font-size:0.34rem; font-weight:normal; line-height:0.44rem; vertical-align:top}
+.dl-flist-type1 dt .fcms-title-type1 {margin-bottom:0;font-size:0.28rem}
+.dl-flist-type1 dt h3 {margin-top:0}
+.dl-flist-type1 dd {display:table-cell;  width:calc(100% - 1.76rem); color:#222; font-size:0.28rem; line-height:0.38rem}
+
+/*li항목별 (가로 예외처리)*/
+.ul-flist-type1 .item.block .dl-flist-type1 {display:block}
+.ul-flist-type1 .item.block .dl-flist-type1 dt {display:block; width:100%; padding-left:0}
+.ul-flist-type1 .item.block .dl-flist-type1 dt .fcms-title-type1 {font-size:0.32rem}
+.ul-flist-type1 .item.block .dl-flist-type1 dd {display:block; width:100%; margin-top:0.24rem; padding-left:0; font-size:0.26rem}
+
+/* fcms-whydgb-wrap */
+.fcms-whydgb-wrap {margin:0 -0.2rem}
+.fcms-whydgb-list > li {margin-top:0.28rem}
+.fcms-whydgb-list > li:first-child {margin-top:0.24rem}
+.fcms-whydgb-list>li dl {position:relative; min-height:1.9rem; padding:0 0 0 1.7rem}
+.fcms-whydgb-list>li dt {position:absolute; left:0; top:0; color:#222; font-size:0.26rem; font-weight:700; line-height:1.46; text-align:center}
+.fcms-whydgb-list>li dd {color:#222; text-align:left}
+.fcms-whydgb-list>li dd p {margin-top:0.18rem; font-size:0.26rem; line-height:1.5}
+.fcms-whydgb-list>li dd p strong {font-weight:700; font-size:0.24rem; line-height:1.5}
+.fcms-whydgb-list>li dd p:first-child {margin-top:0}
+.fcms-whydgb-list>li .icns {display:block}
+.fcms-whydgb-list>li .icns:before {content:''; display:inline-block; width:1.12rem; height:1.12rem; margin-bottom:0.1rem; border-radius:50%; background-color:#f9f9f9}
+.icns.icns-whydgb-stability:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-whydgb-stability.png) center center no-repeat; background-size:auto 0.53rem}
+.icns.icns-whydgb-convenience:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-whydgb-convenience.png) center center no-repeat; background-size:auto 0.53rem}
+.icns.icns-whydgb-profitability:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-whydgb-profitability.png) center center no-repeat; background-size:auto 0.53rem}
+.icns.icns-whydgb-professionalism:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-whydgb-professionalism.png) center center no-repeat; background-size:auto 0.53rem}
+
+/* financial product main */
+.fmall-mtab-wrap {font-family:'SpoqaHanSansNeo'}
+.fmall-mtab-list {font-size:0}
+.fmall-mtab-list:after {content:''; display:block; clear:both}
+.fmall-mtab-list li {display:inline-block; position:relative; width:33.3%}
+.fmall-mtab-list li:first-child {width:33.4%}
+.fmall-mtab-list li .btns {display:block; font-size:0.32rem; font-weight:700; color:#666; text-align:center; line-height:0.4rem}
+.fmall-mtab-list li .btns span {display:inline-block; position:relative; padding-bottom:0.26rem}
+.fmall-mtab-list li.is-active .btns {color:#222}
+.fmall-mtab-list li.is-active .btns span:after {content:''; display:block; position:absolute; left:50%; bottom:0; width:0.1rem; height:0.1rem; margin-left:-0.05rem; border-radius:50%; background-color:#000}
+
+/* fmall main (bottom layer) */
+.ui-panel {display:block; position:fixed; top:0; left:0; z-index:9999; width:100%; height:100%; background:transparent}
+.ui-panel  * {text-shadow:none}
+.ui-panel.ui-body-a {text-shadow:none}
+.ui-panel.ui-panel-closed {overflow:hidden; visibility:visible;clip:auto}
+.ui-panel.ui-panel-display-overlay {z-index:11}
+.ui-panel.ui-panel-position-left {left:0; bottom:-17em}
+.ui-panel.ui-panel-display-overlay {-webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none}
+.ui-panel.ui-panel-animate {-webkit-transition:-webkit-transform 300ms ease; -webkit-transition-duration:300ms; -moz-transition:-moz-transform 300ms ease; transition:transform 300ms ease}
+.ui-panel.ui-panel-animate.ui-panel:not(.ui-panel-display-reveal) {-webkit-backface-visibility:hidden; -webkit-transform:translate3d(0,0,0)}
+.ui-panel.ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay,
+.ui-panel.ui-panel-animate.ui-panel-position-left.ui-panel-display-push {bottom:0; -webkit-transform:translate3d(0,93%,0); -moz-transform:translate3d(0,93%,0); transform:translate3d(0,93%,0)}
+.ui-panel.ui-panel-position-left.ui-panel-display-reveal, .ui-panel-open.ui-panel-position-left{bottom:0}
+.ui-panel.ui-panel-animate.ui-panel:not(.ui-panel-display-reveal) {-webkit-backface-visibility:hidden; -webkit-transform:translate3d(0,0,0)}
+.ui-panel.ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay,
+.ui-panel.ui-panel-animate.ui-panel-position-left.ui-panel-display-push {bottom:0; -webkit-transform:translate3d(0,93%,0); -moz-transform:translate3d(0,93%,0); transform:translate3d(0,93%,0)}
+.ui-panel.ui-panel-animate.ui-panel-open.ui-panel-position-left.ui-panel-display-overlay,
+.ui-panel.ui-panel-animate.ui-panel-open.ui-panel-position-left.ui-panel-display-push {-webkit-transform:translate3d(0,0,0); transform:translate3d(0,0,0); -moz-transform:none}
+
+/*custom*/
+.ui-panel .ui-panel-inner {overflow:hidden; position:relative; z-index:1111; height:100%; padding:0; border:0.02rem solid #ccc; border-radius:0.7rem 0.7rem 0 0; background:#fff}
+.ui-panel .fcms-panel-inbox {position:relative; overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch; height:100%; padding-top:1rem; box-sizing:border-box}
+.ui-panel .yscroll-pannel-wrap {padding:0.2rem 0.4rem 1.6rem 0.4rem}
+.ui-panel .fcms-panel-btnswrap {position:absolute; top:0; right:-0.02rem; left:-0.02rem; z-index:1234; box-shadow:5px 0 5px rgb(0 0 0 / 15%)}
+.ui-panel .fcms-panel-btns {display:block; margin:0; height:1.2rem; line-height:0.46rem; padding:0.22rem 0.2rem 0.22rem 0.2rem; background:#fff; color:#000 !important; font-size:0; text-align:center}
+.ui-panel .fcms-panel-btns span {position:relative}
+.ui-panel .fcms-panel-btns span:after {content:''; display:block; position:absolute; left:50%; top:-0.22rem; width:0.62rem; height:0.18rem; margin-left:-0.31rem; border-radius:5px; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_fcms-panel-btns.png) 0 0 no-repeat; background-size:100% auto}
+.ui-panel.ui-panel-open .fcms-panel-btns span:after  {transform:rotate(-180deg)}
+
+/* fmall main (bottom layer) - add */
+#fmall-panel-header {display:none; position:fixed; left:0; top:0; z-index:12; width:100%; min-height:1.1rem; border:0; font-size:0; text-align:right; box-sizing:border-box}
+#fmall-panel-header * {text-shadow:none}
+#fmall-panel-header.is-fixed {box-shadow:5px 0 5px rgb(0 0 0 / 15%)}
+#fmall-panel-header .inbox {overflow:hidden; min-height:1.1rem; font-size:0; background:#fff; box-sizing:border-box; word-break:keep-all}
+#fmall-panel-header .fmall-htitle {overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical; position:absolute; left:0; right:0; z-index:0;height:1.1rem; line-height:1.1rem; padding:0 1rem; color:#000; font-family:'Pretendard'; font-size:0.38rem; font-weight:700; text-align:center}
+#fmall-panel-header [class^="fmall-btn-header"] {display:inline-block; position:relative; z-index:1; width:1rem; height:1.1rem; text-indent:-9999px; text-align:left; background:url(../img/sbs/cmm/cmm_btn_header.png) 0 0 / 2.2rem no-repeat}
+#fmall-panel-header .fmall-btn-header-back {float:left; background-position:-1.14rem 0}
+#fmall-panel-header .fmall-btn-header-menu {background-position:-1.14rem -11rem}
+
+/*레이어 버튼 제어*/
+.ui-panel.ui-panel-closed .fcms-panel-btnswrap {display:block}
+.ui-panel.ui-panel-open .fcms-panel-btnswrap {display:none}
+
+/*상품몰 헤더 제어*/
+.ui-panel #fmall-panel-header {position:absolute; top:0; right:-0.02rem; left:-0.02rem; z-index:1234; box-shadow:5px 0 5px rgb(0 0 0 / 15%)}
+.ui-panel.ui-panel-closed #fmall-panel-header {display:none}
+.ui-panel.ui-panel-open #fmall-panel-header {display:block}
+
+/* main - pick */
+.fmallpick-infos-wrap {margin:0.6rem 0}
+.fmallpick-infos-wrap .inbox {display:block; position:relative; width:100%}
+.fmpickimg {overflow:hidden; border-radius:13px}
+.fmpickimg img {width:100%}
+.fmpickcon {position:absolute; top:0; left:0; width:100%; height:100%; padding:0.38rem; color:#fff; box-sizing:border-box}
+.fmpickcon > * {display:block}
+.fmpickcon .gtxt {position:absolute; bottom:0.38rem; right:0.38rem; left:0.38rem; font-size:0.2rem; text-align:right}
+.fmallpick-btns {display:block}
+.fmallpick-btns .inbox {min-height:171px}
+.fmallpick-btns-qustn {display:table; height:calc(100% - 0.4rem); font-size:0.54rem; font-weight:700}
+.fmallpick-btns-qustn span {display:table-cell; vertical-align:middle}
+.fmallpick-btns-text {position:absolute; left:0.38rem; bottom:0.38rem; font-size:0.32rem}
+.fmallpick-btns-text span {position:relative; padding-right:0.36rem}
+.fmallpick-btns-text span:after {content:''; display:inline-block; position:absolute; right:0; top:50%;  width:0.18rem; height:0.28rem; margin-top:-0.14rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_ra_type4.png) center center no-repeat; background-size:100% auto}
+.fmallpick-infos .inbox {min-height:233px}
+.fmallpick-infos-qustn {display:table-cell; height:150px; font-size:0.54rem; font-weight:700}
+.fmallpick-infos-qustn span {vertical-align:middle}
+.fmallpick-infos-list {display:flex; justify-content:space-between; position:absolute; bottom:0.86rem; right:0.38rem; left:0.38rem}
+.fmallpick-infos-list > li {position:relative; width:33.333333%; padding:0 0.2rem}
+.fmallpick-infos-list > li:first-child {width:33.444444%; padding-left:0}
+.fmallpick-infos-list > li:last-child {padding-right:0}
+.fmallpick-infos-list > li:after {content:''; position:absolute; left:-0.1rem; bottom:0.12rem; width:0.02rem; height:0.2rem; background:#fff; opacity:0.5}
+.fmallpick-infos-list > li:first-child:after {display:none}
+.fmallpick-infos-list > li dt {font-size:0.24rem}
+.fmallpick-infos-list > li dd {font-size:0.34rem}
+.fmallpick-infos-list > li dd strong {font-size:0.40rem}
+
+/*fmallmain-body*/
+.mpick-yscroll-wrap {min-height:1rem}
+.mpick-yscroll-wrap.is-fixed .tab-mpick {position:fixed; left:0; right:0; top:1.1rem; z-index:1111; padding:0 0.38rem; border-top:1px solid #ddd}
+.fmallmain-wrap .fprod-tab-content .fprodlist-wrap {margin-top:0}
+.fmallmain-wrap .fprod-tab-content .fprodlist-type1 {margin-top:0.18rem}
+
+/* main - one view */
+.link-fprodlist-wrap {margin:0.3rem 0 0.6rem 0}
+.link-fprodlist-list:after {content:''; display:block; clear:both}
+.link-fprodlist-list > li {float:left; display:inline-block; width:25%; padding-top:0.3rem; text-align:center}
+.link-fprodlist-list > li .btns {display:block; font-size:0.24rem; font-weight:700}
+.link-fprodlist-list .icns {position:relative; display:block}
+.link-fprodlist-list .icns:before {content:''; display:inline-block; width:1rem; height:1rem; border-radius:50%; background-color:#f5f6f7 !important; background-size:100% auto !important}
+.link-fprodlist-list .icns.icns-loan:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_loan.png) no-repeat}
+.link-fprodlist-list .icns.icns-card:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_card.png) no-repeat}
+.link-fprodlist-list .icns.icns-account:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_account.png) no-repeat}
+.link-fprodlist-list .icns.icns-deposit:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_deposit.png) no-repeat}
+.link-fprodlist-list .icns.icns-savings:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_savings.png) no-repeat}
+.link-fprodlist-list .icns.icns-forex:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_forex.png) no-repeat}
+.link-fprodlist-list .icns.icns-fund:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_fund.png) no-repeat}
+.link-fprodlist-list .icns.icns-irp:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns_main_irp.png) no-repeat}
+.fcms-banner-type1+.fprodlist-wrap {margin-top:0.8rem}
+.fmallmain-wrap .fprodlist-type1 .item:first-child {border-top:0}
+
+/*IM원샷대출한도조회 슬라이드 배너*/
+.slider-banner-wrap {position:relative; margin:0 -0.4rem 0.72rem -0.4rem}
+.slider-banner-wrap:before {content:''; display:block; position:absolute; right:2.26rem; bottom:0; width:100%; height:1.5rem; background:#ffe2c1}
+.slider-banner-wrap:after {content:''; display:block; position:absolute; right:0; bottom:0; width:100%; height:1.5rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_slider-banner-wrap.png) 90% center no-repeat; background-size:auto 100%}
+.slider-banner {position:relative; width:100%; height:1.91rem; padding-left:0.4rem; border:0}
+.slider-banner:after {content:''; display:block; clear:both}
+.slider-banner .slider-handle {position:relative; bottom:0; left:0; width:1.77rem; height:1.91rem; transition:all ease 0.2s}
+.slider-banner .slider-handle:before {content:''; display:block; position:absolute; bottom:0; right:0; z-index:5; width:1.77rem; height:1.91rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_slider-banner.png) left center no-repeat; background-size:100% auto; animation:bounce 1s infinite linear 0.5s}
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform:translate3d(0,0,0);
+    }
+    40%, 43% {
+        transition-timing-function:cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform:translate3d(0, -30px, 0);
+    }
+    70% {
+        transition-timing-function:cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform:translate3d(0, -0.3rem, 0);
+    }
+    90% {
+        transform:translate3d(0,-4px,0);
+    }
+}
+
+/*따라오는 배경*/
+.slider-banner .slider-handle:after {content:''; display:block; position:absolute; bottom:0; z-index:1; width:520%; height:1.5rem; background:#ffe2c1 url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_slider-handle.png) center center no-repeat; background-size:3.38rem auto}
+.slider-banner .slider-handle:after {right:0}
+.slider-banner.is-active .slider-handle:after {right:-0.4rem}
+
+/*211015 로그인전 영역*/
+.bfr-flogin-wrap {margin-bottom:0.6rem; text-align:center}
+.bfr-flogin-wrap .bfr-flogin-msg {font-size:0.32rem; font-weight:700; line-height:0.44rem}
+.bfr-flogin-wrap .bfr-flogin-bg {display:inline-block; position:relative; margin-top:0.54rem}
+.bfr-flogin-wrap .bfr-flogin-bg.bg-type1:after {content:''; display:inline-block; width:4.7rem; height:4.24rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_bfr_flogin.png) center center no-repeat; background-size:100% auto} /*커플 돈방석*/
+.bfr-flogin-wrap .bfr-flogin-bg.bg-type2:after {content:''; display:inline-block; width:5.3rem; height:4.78rem; background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/bg_bfr_flogin2.png) center center no-repeat; background-size:100% auto} /*선물상자*/
+.bfr-flogin-wrap .btn-wrap {margin-top:15px}
+.bfr-flogin-wrap .bfr-flogin-btn {width:calc(100% - 2.46rem); padding:0.1rem 0.2rem; border-radius:0.6rem; color:#222; font-size:0.28rem; font-weight:700; line-height:0.44rem; border:1px solid #ddd}
+.fcms-section.type-bg.bg_pension_irp3 .fcms-section-inbox:after{display:none}
+.fcms-section.type-bg.bg_pension_irp3 *:before,
+.fcms-section.type-bg.bg_pension_irp3 *:after{background:url('https://www.dgb.co.kr/cms/cmshtml/img/finance/sprite_fpdetail_irp.png') no-repeat 0 0 / 7.5rem auto}
+.fcms-section.type-bg.bg_pension_irp3 .info{margin-top:0.1rem;text-align:center}
+.fcms-section.type-bg.bg_pension_irp3 .info .top{margin:0 0 0.3rem 0;font-size:0.26rem}
+.fcms-section.type-bg.bg_pension_irp3 .info .bottom{display:flex}
+.fcms-section.type-bg.bg_pension_irp3 .info .bottom > div{flex:1;font-size:0.26rem;color:#000}
+.fcms-section.type-bg.bg_pension_irp3 .info .bottom .t2{position:relative;margin:0.08rem 0 0.2rem 0}
+.fcms-section.type-bg.bg_pension_irp3 .info .bottom .t2:before{content:'';display:block;margin:0 auto;width:2.4rem;height:2.4rem;background-position:0 -3.6rem}
+.fcms-section.type-bg.bg_pension_irp3 .info .bottom .t2 span{position:absolute;left:0;top:1.42rem;width:100%;font-size:0.34rem;color:#de6b6b;font-weight:500}
+.fcms-section.type-bg.bg_pension_irp3 .info .bottom .right .t2:before{background-position:-3.1rem -3.6rem}
+.fcms-section.type-bg.bg_pension_irp3 .info .bottom .t3{font-size:0.22rem;color:#4e4e4e}
+.fcms-section.type-bg.bg_pension_irp3 > .txt + .info{margin-top:0.16rem}
+.fmall-btn-header-close{width:1.1rem}
+.fmall-btn-header-close:before,
+.fmall-btn-header-close:after{content:'';position:absolute;left:50%;top:50%;width:0.04rem;height:0.5rem;background:#555;transform:translate(-50%, -50%) rotate(45deg)}
+.fmall-btn-header-close:after{transform:translate(-50%, -50%) rotate(-45deg)}
+.fprodview-wrap .fprodview-head .fprodmsg-wrap .detail-visual{margin:0.4rem -0.5rem 0 -0.4rem;text-align:center}
+.fprodview-wrap .fprodview-head .fprodmsg-wrap .detail-visual img{display:block;width:100%;height:auto}
+
+#content.fmain {padding-left:0.7rem; padding-right:0.7rem}
+#content.fmain .fmall-mtab-wrap {margin:0 -0.3rem}
+
+/*all wrap*/
+.fmall-mslider-wrap {margin-left:-0.7rem; padding-left:0.2rem}
+
+/*image*/
+.fmmslider-list > li img {width:100%}
+.fmmslider-list > li .btns  {display:block; position:relative; margin-left:0.5rem}
+.fmmslider-list > li .bg  {display:block; overflow:hidden; border-radius:0.3rem; -webkit-backface-visibility:hidden; -webkit-transform:translate(0, 0, 0)}
+.fmmslider-list > li .btns .txt {position:absolute; left:0.6rem; bottom:0.8rem; z-index:1; height:1.8rem}
+.fmmslider-list > li .btns .txt img {width:auto; height:100%}
+
+/*slider pager*/
+.fmmslider-wrap {position:relative; margin:0.6rem auto 0 auto; text-align:center}
+.fmmslider-wrap .swiper-pagination {display:inline-block; position:static; left:auto; top:auto; width:auto !important; margin-left:1.3rem; font-size:0; text-align:center; vertical-align:top}
+.fmmslider-wrap .swiper-pagination span {overflow:hidden;display:inline-block;position:relative;margin:0 !important; vertical-align:top; width:0.34rem; height:0.34rem; margin:0; border-radius:0; font-size:0;background:none}
+.fmmslider-wrap .swiper-pagination span:before{content:'';position:absolute;left:50%;top:50%;width:0.2rem;height:0.2rem;border-radius:50%;background:#ddd;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%)}
+.fmmslider-wrap .swiper-pagination span.swiper-pagination-bullet-active {width:0.74rem;background:none}
+.fmmslider-wrap .swiper-pagination span.swiper-pagination-bullet-active:before{width:0.6rem;border-radius:0.2rem;background:#888}
+
+/*slider control*/
+.fmmslider-wrap .fmmslider-autoplay {display:none; position:relative;top:-0.02rem;vertical-align:top;width:0.4rem;height:0.4rem;}
+.fmmslider-wrap .fmmslider-autoplay.is-active {display:inline-block}
+.fmmslider-wrap .fmmslider-autoplay span {display:inline-block; vertical-align:top; font-size:0}
+.fmmslider-wrap .fmmslider-autoplay span:before {content:''; display:inline-block;position:absolute;left:50%;top:50%; vertical-align:top; width:0.14rem; height:0.18rem;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%)}
+.fmmslider-wrap .fmmslider-autoplay.fmmslider-stop span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fmmslider-control.png) center center no-repeat; background-position:0 0; background-size:100% auto}
+.fmmslider-wrap .fmmslider-autoplay.fmmslider-play span:before {background:url(https://www.dgb.co.kr/cms/cmshtml/img/finance/icns-fmmslider-control.png) center center no-repeat; background-position:0 -0.38rem; background-size:100% auto}
+
+/* fmall main (visual slider)*/
+.mySwiper.swiper-container {overflow:visible;max-width:430px}
+.mySwiper.swiper-container.swiper-3d .swiper-slide-shadow {background:none !important}
+.mySwiper .swiper-wrapper {margin-bottom:0.3rem}
+.mySwiper.swiper-loof .swiper-slide-duplicate+.swiper-slide-duplicate-active+.swiper-slide{transform:translate3d(calc(-100%), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1) !important}
+
+#MALL_BOTTOM_LAYER .fcms-panel-inbox{display:none}
+#MALL_BOTTOM_LAYER.ui-panel-open .fcms-panel-inbox{display:block}
+.fcms-title-type1{position:relative;margin-bottom:0.1rem}
+.fcms-title-type1 .right-small{position:absolute;right:0;bottom:0;font-size:0.24rem;color:#888;font-weight:400}
+.fcms-tab-basic{position:relative;margin:-0.44rem 0 0 0;height:1.3rem}
+.fcms-tab-basic .list{position:absolute;left:0;top:0;width:100%;padding:0.3rem 0;height:1.3rem;font-size:0;box-sizing:border-box}
+.fcms-tab-basic.is-fixed .list{position:fixed;top:1.1rem;z-index:3;padding:0 0.4rem 0.3rem 0.4rem;height:1rem;border-bottom:solid 0.02rem #eee;background:#fff}
+.yscroll-pannel-wrap .fprodview-head{padding-top:0.3rem}
+.yscroll-pannel-wrap .fprodview-head .fprodshare-wrap{top:0.46rem}
+#fmall-panel-header .inbox{position:relative}
+#fmall-panel-header .fmall-htitle{transform:translate(0, 100%);transition:transform 0.2s ease;-webkit-transition:transform 0.2s ease}
+#fmall-panel-header.is-fixed .fmall-htitle{transform:translate(0, 0);transition-duration:0.3s;-webkit-transition-duration:0.3s}
+.fcms-tab-basic .list{white-space:nowrap}
+.fcms-tab-basic .list button{display:inline-block;min-width:1.5rem;padding:0 0.2rem;height:0.7rem;color:#222;font-size:0.26rem;font-weight:700;border:0.02rem solid #ddd;border-radius:0.5rem;background:#fff;text-align:center;box-sizing:border-box;outline:none}
+.fcms-tab-basic .list button + button{margin-left:0.14rem}
+.fcms-tab-basic .list .active{color:#fff; border:0.02rem solid #222; background:#222}
+.yscroll-pannel-wrap .fcms-tab-basic.is-fixed .list{padding-top:0.3rem;height:1.3rem}
+.fcms-tab-container .tab-panel{display:none}
+.fcms-tab-container .tab-panel.active{display:block}
+#header.finance-mall h1.tit{overflow:hidden}
+#header.finance-mall h1.tit span{display:inline-block;position:relative;transform:translate(0, 150%);-webkit-transform:translate(0, 150%);transition:transform 0.2s ease;-webkit-transition:transform 0.2s ease}
+#header.finance-mall.is-fixed h1.tit span{transform:translate(0, 0);-webkit-transform:translate(0, 0);transition-duration:0.3s;-webkit-transition-duration:0.3s}
+
+.fcms-xtab-type1.item-flex {display:flex}
+.fcms-xtab-type1.item-flex li{flex:1}
+.fcms-xtab-type1.item-flex li button{padding:0 0.04rem;white-space:nowrap}
+
+/* 금융상품몰 배너 애니메이션 */
+@keyframes CMSBannerType1Left{
+    0%, 8%, 34%, 100%{transform:translate(0, 0);-webkit-transform:translate(0, 0)}
+    15%{transform:translate(7%, 0);-webkit-transform:translate(7%, 0)}
+    21%{transform:translate(-3%, 0);-webkit-transform:translate(-3%, 0)}
+    27%{transform:translate(2%, 0);-webkit-transform:translate(2%, 0)}
+    32%{transform:translate(-0.5%, 0);-webkit-transform:translate(-0.5%, 0)}
+}
+.cms-banner-ani.full{margin:0 -0.5rem}
+.cms-banner-ani button{position:relative;width:100%}
+.cms-banner-ani button > span{display:block;position:relative;width:100%;height:1.8rem;color:rgba(255,255,255,0)}
+.cms-banner-ani *:before,
+.cms-banner-ani *:after{position:absolute;background:url('https://www.dgb.co.kr/cms/cmshtml/img/imbank/imbank_cms_banner.png?v=mydata') no-repeat 0 0 / 7.5rem auto}
+.cms-banner-ani .type1{overflow:hidden}
+.cms-banner-ani .type1:before{content:'';left:0;bottom:0;width:100%;height:1.4rem;background:#fff4de}
+.cms-banner-ani .type1 span:before{content:'';left:50%;top:0.94rem;margin-left:-3.1rem;width:4.26rem;height:0.36rem;transform:translate(100vw, 0);-webkit-transform:translate(100vw, 0)}
+.cms-banner-ani .type1 span:after{content:'';left:50%;bottom:0;margin-left:1.94rem;width:1.86rem;height:1.82rem;background-position:0 -0.4rem;transform:translate(40vw, 0);-webkit-transform:translate(40vw, 0)}
+.animate .cms-banner-ani .type1 span:before{transform:translate(0, 0);-webkit-transform:translate(0, 0);transition:transform 0.6s cubic-bezier(0.18, 0.7, 0.32, 1.1) 0.6s;-webkit-transition:transform 0.6s cubic-bezier(0.18, 0.7, 0.32, 1.1) 0.6s}
+.animate .cms-banner-ani .type1 span:after{transform:translate(0, 0);-webkit-transform:translate(0, 0);transition:transform 0.5s ease-out 0.3s;-webkit-transition:transform 0.5s ease-out 0.3s}
+.animate .cms-banner-ani .type1 span:before{animation:CMSBannerType1Left 5s ease-out infinite forwards 2.5s;-webkit-animation:CMSBannerType1Left 5s ease-out infinite forwards 2.5s}
+
+/* 마이데이터 배너 */
+.cms-banner-ani .mydata{overflow:hidden}
+.cms-banner-ani .mydata > span{height:2.1rem;background:#faedde}
+.cms-banner-ani .mydata > span:before{content:'';left:50%;top:0.62rem;margin-left:-3.3rem;width:3.56rem;height:0.94rem;background-position:0 -2.6rem;transform:translate(100vw, 0);-webkit-transform:translate(100vw, 0)}
+.cms-banner-ani .mydata > span:after{content:'';left:50%;top:0.14rem;margin-left:0.5rem;width:1.76rem;height:1.88rem;background-position:-2rem -0.4rem;transform:translate(50vw, 0);-webkit-transform:translate(50vw, 0)}
+.cms-banner-ani .mydata:before{content:'';left:50%;top:0.4rem;z-index:2;margin-left:2.36rem;width:0.66rem;height:0.4rem;background-position:-3.9rem -0.4rem;transform-origin:0 50%;-webkit-transform-origin:0 50%;transform:translate(-0.3rem, 0) scale(0);-webkit-transform:translate(-0.3rem, 0) scale(0)}
+.cms-banner-ani .mydata span span:before{content:'';left:50%;top:0.88rem;z-index:2;margin-left:2.46rem;width:0.9rem;height:0.26rem;background-position:-3.9rem -0.9rem;transform-origin:0 50%;-webkit-transform-origin:0 50%;transform:translate(-0.3rem, 0) scale(0);-webkit-transform:translate(-0.3rem, 0) scale(0)}
+.cms-banner-ani .mydata span span:after{content:'';left:50%;top:1.26rem;z-index:2;margin-left:2.36rem;width:0.66rem;height:0.42rem;background-position:-3.9rem -1.3rem;transform-origin:0 50%;-webkit-transform-origin:0 50%;transform:translate(-0.3rem, 0) scale(0);-webkit-transform:translate(-0.3rem, 0) scale(0)}
+.animate .cms-banner-ani .mydata > span:before{transform:translate(0, 0);-webkit-transform:translate(0, 0);transition:transform 0.6s cubic-bezier(0.18, 0.7, 0.32, 1.1) 0.6s;-webkit-transition:transform 0.6s cubic-bezier(0.18, 0.7, 0.32, 1.1) 0.6s;animation:CMSBannerType1Left 5s ease-out infinite forwards 2.5s;-webkit-animation:CMSBannerType1Left 5s ease-out infinite forwards 2.5s}
+.animate .cms-banner-ani .mydata > span:after{transform:translate(0, 0);-webkit-transform:translate(0, 0);transition:transform 0.5s ease-out 0.3s;-webkit-transition:transform 0.5s ease-out 0.3s}
+.animate .cms-banner-ani .mydata:before,
+.animate .cms-banner-ani .mydata span span:before,
+.animate .cms-banner-ani .mydata span span:after{transform:translate(0, 0) scale(1);-webkit-transform:translate(0, 0) scale(1);transition:transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1.05s;-webkit-transition:transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1.05s}
+.animate .cms-banner-ani .mydata span span:before{transition-delay:1s;-webkit-transition-delay:1s}
+.animate .cms-banner-ani .mydata span span:after{transition-delay:1.08s;-webkit-transition-delay:1.08s}
+
+
+
+
+
+.fmall-mslider-wrap{position:absolute;left:0;top:50%;padding:0 0.4rem 0 0.7rem;width:100%;box-sizing:border-box;transform:translate(0, -50%);-webkit-transform:translate(0, -50%);}
+
+.fmmslider-list > li .txt{transform:translateZ(0) translate3d(0.8rem, 0, 0);-webkit-transform:translateZ(0) translate3d(0.8rem, 0, 0);opacity:0;transition:transform 0.3s ease-out 1s, opacity 0.3s ease-out 1s;-webkit-transition:transform 0.3s ease-out 1s, opacity 0.3s ease-out 1s}
+.fmmslider-list > .swiper-slide-active .txt{transform:translateZ(0) translate3d(0, 0, 0);-webkit-transform:translateZ(0) translate3d(0, 0, 0);opacity:1;transition:transform 0.6s ease-out 0.3s, opacity 0.6s linear 0.3s;-webkit-transition:transform 0.6s ease-out 0.3s, opacity 0.6s linear 0.3s}
+
+
+/* 희망플러스 상품내 */
+.fcms-hope-circle{margin-top:0.3rem;font-size:0;text-align:center}
+.fcms-hope-circle > div{display:inline-block;margin:0 -0.14rem;padding:0.6rem 0 0 0;width:2.4rem;height:2.4rem;font-size:0.26rem;color:#222;text-align:center;font-weight:500;line-height:1.5;border-radius:50%;background:#e4f6fb;box-sizing:border-box}
+.fcms-hope-circle .right{background:#fcf3f9}
+.fcms-hope-year{position:relative;margin:0.3rem auto 0 auto;padding:0 0 0 2.2rem;max-width:5.5rem;box-sizing:border-box}
+.fcms-hope-year:before{content:'';position:absolute;left:0;top:-0.14rem;width:1.56rem;height:4.28rem;background:url('https://www.dgb.co.kr/cms/cmshtml/img/finance/loan_hope.png') no-repeat 0 0 / 7.5rem auto}
+.fcms-hope-year > dl{position:relative;padding:0 0 0 0.4rem;line-height:1.2}
+.fcms-hope-year > dl:before{content:'';position:absolute;left:0;top:0;width:0.02rem;height:100%;background:#9c27b0}
+.fcms-hope-year > dl:after{content:'';position:absolute;left:-0.064rem;bottom:0;border-top:solid 0.1rem #9c27b0;border-left:solid 0.07rem transparent;border-right:solid 0.07rem transparent}
+.fcms-hope-year > dl > dt{margin:0 0 0.14rem -0.1rem}
+.fcms-hope-year > dl > dd + dt{margin-top:0.3rem}
+.fcms-hope-year > dl > dt span{display:inline-block;padding:0 0.1rem;min-width:1.14rem;height:0.42rem;font-size:0.24rem;font-weight:500;color:#9c27b0;text-align:center;line-height:0.42rem;border-radius:0.42rem;border:solid 0.02rem #9c27b0;box-sizing:border-box}
+.fcms-hope-year > dl > dd{font-size:0.32rem;color:#222;font-weight:500}
+.fcms-hope-year > dl > dd p{line-height:1.25 !important}
+.fcms-hope-year > dl > dd .t1{margin:0 0 0.04rem 0}
+.fcms-hope-year > dl > dd .t1 strong{font-size:0.26rem}
+.fcms-hope-year > dl > dd .t1 span{font-size:0.24rem}
+.fcms-hope-info{color:#222;text-align:left}
+.fcms-hope-info > .tit{margin:0 0 0.14rem 0;font-size:0.32rem;font-weight:500}
+.fcms-hope-info > .txt li{padding:0 0 0 0.2rem;text-indent:-0.2rem;font-size:0.24rem;line-height:1.35}
+.fcms-hope-info > .txt li + li{margin-top:0.08rem}
+.fcms-section-inbox.bg-hope1{padding-bottom:4.1rem}
+.fcms-section-inbox.bg-hope1:before{content:'';position:absolute;left:50%;top:2.8rem;width:3rem;height:4.24rem;background:url('https://www.dgb.co.kr/cms/cmshtml/img/finance/loan_hope.png') no-repeat -2.5rem 0 / 7.5rem auto;transform:translate(-50%, 0);-webkit-transform:translate(-50%, 0)}
+
+
